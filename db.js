@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 console.log('ready');
+console.log(process.env);
 console.log(process.env.DATABASE_URL);
 const conn = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost/my_db');
 
