@@ -39,7 +39,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test
-        environment:
-          - foo=bar
-          - bazz=quq
+      - run: foo=bar yarn test
