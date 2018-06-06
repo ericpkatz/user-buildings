@@ -17,6 +17,7 @@ const Apartment = conn.define('apartment', {
 
 Apartment.belongsTo(User);
 Apartment.belongsTo(Building);
+User.hasMany(Apartment);
 
 const sync = ()=> {
   return conn.sync({ force: true });
@@ -25,10 +26,22 @@ const sync = ()=> {
 const syncAndSeed = ()=> {
   return sync()
     .then( ()=> {
+      return Promise.all([
+        User.create({ name: 'moe' }),
+        Building.create({ name: '400 cpw' })
+      ])
+      .then(([ moe, cpw])=> {
+        return Apartment.create({ apartmentNumber: 'PH', userId: moe.id, buildingId: cpw.id });
+      });
 
     });
 };
 
 module.exports = {
-  syncAndSeed
+  syncAndSeed,
+  models: {
+    User,
+    Building,
+    Apartment
+  }
 };

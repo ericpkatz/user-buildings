@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "DATABASE_URL=postgres://test_user@localhost:5432/my_db ./node_modules/mocha/bin/mocha test.js",
-    "test:dev": "npm run test -- -w"
+    "test:dev": "./node_modules/mocha/bin/mocha -w test.js"
   },
   "keywords": [],
   "author": "",
