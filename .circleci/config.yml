@@ -42,5 +42,5 @@ jobs:
       - run:
           command: yarn test
           environment:
-          - foo=bar
-          - bazz=quq
+            - foo=bar
+            - bazz=quq
