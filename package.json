@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "DATABASE_URL=postgres://localhost/circledb ./node_modules/mocha/bin/mocha test.js",
+    "test": "DATABASE_URL=postgres://localhost/circle_test ./node_modules/mocha/bin/mocha test.js",
     "test:dev": "npm run test -- -w"
   },
   "keywords": [],
