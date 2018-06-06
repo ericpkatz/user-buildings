@@ -40,4 +40,6 @@ jobs:
         
       # run tests!
       - run: yarn test
-
+        environment:
+          - foo=bar
+          - baz=quq
