@@ -7,8 +7,8 @@ jobs:
   build:
     docker:
       environment:
-        foo=bar
-        bazz=quq
+        - foo=bar
+        - bazz=quq
       # specify the version you desire here
       - image: circleci/node:7.10
       - image: circleci/postgres:9.5
