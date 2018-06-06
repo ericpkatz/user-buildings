@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "DATABASE_URL=postgres://test_user@localhost:5432/my_db ./node_modules/mocha/bin/mocha test.js --exit",
+    "test": "DATABASE_URL=postgres://test_user@localhost/my_db ./node_modules/mocha/bin/mocha test.js --exit",
     "test:dev": "./node_modules/mocha/bin/mocha -w test.js"
   },
   "keywords": [],
