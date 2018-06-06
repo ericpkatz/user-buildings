@@ -12,6 +12,7 @@ jobs:
         environment:
           - POSTGRES_USER=test_user
           - POSTGRES_DB=user_buildings_db
+          - foo=bar
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
