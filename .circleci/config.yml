@@ -10,6 +10,9 @@ jobs:
       - image: circleci/node:7.10
       - image: circleci/postgres:9.5
         environment:
+          - POSTGRES_USER=custom_user
+          - POSTGRES_PASSWORD=custom_password
+          - POSTGRES_DB=cicle_test
           DATABASE_URL: postgresql://root@localhost/circle_test
       
       # Specify service dependencies here if necessary
